@@ -17,7 +17,7 @@ export class PedidosController {
     return this.pedidosService.findAll();
   }
 
-  @Get(':id_cliente')
+  @Get('/cliente/:id_cliente')
   findOne(@Param('id_cliente') id_cliente: number) {
     return this.pedidosService.findByClient(id_cliente);
   }
