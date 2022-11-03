@@ -71,3 +71,34 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+
+
+
+## VIPTECH TEST
+In order for the project to work, you must install the dependencies:
+```bash
+$ npm install
+
+$ npm install --save @nestjs/typeorm typeorm mysql2
+```
+
+After that you'll have to go to the ormconfig.json and app.module.ts files and change it according to your MySQL configs. 
+Once you've done that, you need to go to MySQL and create the database with the same name you've declared on ormconfig.json file.
+
+Now just run the following command:
+```bash
+$ npm start
+```
+On your POSTMAN, the URL is going to be: http://localhost:3000/pedidos and http://localhost:3000/produtos.
+If you don't put anything after 'pedidos' and 'produtos' and use the method GET, you need to put JSON containing the data, for example, to create a product:
+
+ {
+    "nome_produto": "Estojo",
+    "tamanho_produto": "Pequeno",
+    "cor_produto": "#000000",
+    "valor_produto": 15
+ }
+ 
+If you put an id number after 'pedidos/', it will return a list of all the orders from that client's id. To get all the products with the same name, you must write the name of the product after 'produtos/'. If nothing's after the '/', it'll list all the orders and all the products.
