@@ -17,7 +17,7 @@ export class ProdutosController {
     return this.produtosService.findAll();
   }
 
-  @Get(':nome_produto')
+  @Get('/nome/:nome_produto')
   findOne(@Param('nome_produto') nome_produto: string) {
     return this.produtosService.findByName(nome_produto);
   }
