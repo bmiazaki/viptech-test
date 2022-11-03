@@ -92,7 +92,8 @@ Now just run the following command:
 $ npm start
 ```
 On your POSTMAN, the URL is going to be: http://localhost:3000/pedidos and http://localhost:3000/produtos.
-If you don't put anything after 'pedidos' and 'produtos' and use the method GET, you need to put JSON containing the data, for example, to create a product:
+#### Using the POST method
+If you don't put anything after 'pedidos' and 'produtos' you'll need to put JSON containing the data, for example, to create a product:
 
  {
     "nome_produto": "Estojo",
@@ -101,4 +102,11 @@ If you don't put anything after 'pedidos' and 'produtos' and use the method GET,
     "valor_produto": 15
  }
  
-If you put an id number after 'pedidos/', it will return a list of all the orders from that client's id. To get all the products with the same name, you must write the name of the product after 'produtos/'. If nothing's after the '/', it'll list all the orders and all the products.
+#### Using the GET method
+If you use '/cliente/{id}' after 'pedidos/' on the URL, it will return a list of all the orders from that client's id. To get all the products with the same name, you must write 'nome/{nome}' after 'produtos/' on the URL. If nothing's after the '/', it'll list all the orders and all the products. 
+
+#### Using PATCH method
+If you want to edit any product or order, you just need to put the id after the '/' and change the JSON.
+
+#### Using the DELETE method
+If you want to delete any product or order, you just need to put the id after the '/'.
