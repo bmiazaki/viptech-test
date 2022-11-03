@@ -12,7 +12,7 @@ import { PedidosModule } from './pedidos/pedidos.module';
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: 'Aiszwe42@',
+      password: 'root',
       database: 'test_project',
       entities: ["dist/**/*.entity{.ts,.js}"],
       synchronize: true
